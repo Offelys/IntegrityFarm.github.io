@@ -88,19 +88,39 @@
           opacity: 1;
         }
       }
+      @keyframes fade {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
       @keyframes colorChange {
         0% {
           color: red;
         }
-        50% {
+        20% {
+          color: orange;
+        }
+        40% {
           color: yellow;
         }
-        100% {
+        60% {
+          color: green;
+        }
+        80% {
           color: blue;
+        }
+        100% {
+          color: purple;
         }
       }
       .animation {
-        animation: fade 3s infinite, colorChange 3s infinite;
+        animation: fade 3s infinite, colorChange 6s infinite;
       }
     </style>
   </head>
