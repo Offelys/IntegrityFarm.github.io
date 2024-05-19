@@ -77,13 +77,24 @@
         max-width: 50%;
         height: auto;
       }
+       .animation {
+        animation: slide 2s infinite;
+      }
+      @keyframes slide {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
     </style>
   </head>
   <body>
     <div class="container">
         <header>
           <img src="logop.png" alt="Logo"/>
-          <h1>INTEGRITY FARM</h1>
+          <h1 class="animation">INTEGRITY FARM</h1>
         </header>
     <h2>The future of genes and blockcain</h2>
     <div class="image-row">
@@ -95,11 +106,12 @@
       <div class="image-container">
          <div class="zone">
            <h2>The goal </h2>
-           <p>To create a functional product that can be used in various fields of genetic research, whether it's plants, animals, or humans. </p>
+           <p>To create a functional product that can be used in various fields of genetic research, whether it's plants, animals, or humans. In the future, we may be able to create plants that can survive in the most extreme conditions, whether it's deserts or the Arctic, while still producing the food necessary to sustain human life. Or trees that can purify the air from pollutants much more efficiently than any existing technologies.
+ </p>
          </div>
          <div class="zone">
-           <h2>The type of asset </h2>
-           <p>We will be using real-world data to digitize genotype on the blockchain. To create market of genoms</p>
+           <h2> Business model of RWA (Real World Asset) </h2>
+           <p>We will be using real-world data to digitize genotypes on the blockchain. On our farm, we plant crops. In our laboratory, we sequence genotypes. With our software, we analyze and transform genotype data. We also provide assistance to others in this process. Are you interested in joining us?"</p>
          </div>
          <div class="zone">
            <h2>Integrity Tokens</h2>
