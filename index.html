@@ -93,6 +93,19 @@
           opacity: 1;
         }
       }
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+      }
+      
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
     </style>
     <script>
       function changeColors() {
@@ -108,7 +121,7 @@
       }
       setInterval(changeColors, 500);
     </script>
-    </style>
+    
   </head>
   <body>
     <div class="container">
@@ -118,8 +131,8 @@
         </header>
     <h2>The future of genes and blockcain</h2>
     <div class="image-row">
-      <img src="bla.png" alt="Image 1">
-      <img src="kl56.png" alt="Image 2">
+      <img class="fade-in" src="bla.png" alt="Image 1">
+      <img class="fade-in" src="kl56.png" alt="Image 2">
     </div>
       
     <div class="container">
