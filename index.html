@@ -78,14 +78,17 @@
         height: auto;
       }
       .animation {
-        animation: slide 2s infinite;
+        animation: colorChange 3s infinite;
       }
-      @keyframes slide {
+      @keyframes colorChange {
         0% {
-          transform: translateX(-100%);
+          color: #ff0000; /* Красный цвет */
+        }
+        50% {
+          color: #00ff00; /* Зеленый цвет */
         }
         100% {
-          transform: translateX(100%);
+          color: #0000ff; /* Синий цвет */
         }
       }
     </style>
