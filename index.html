@@ -77,16 +77,10 @@
         max-width: 50%;
         height: auto;
       }
-      @keyframes fade {
-        0% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
+    #text {
+        font-size: 24px;
+        position: relative;
+        animation: fade 3s infinite;
       }
       @keyframes fade {
         0% {
@@ -99,36 +93,28 @@
           opacity: 1;
         }
       }
-      @keyframes colorChange {
-        0% {
-          color: red;
+    </style>
+    <script>
+      function changeColors() {
+        var text = document.getElementById("text");
+        var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+        var letters = text.innerText.split("");
+        var html = "";
+        for (var i = 0; i < letters.length; i++) {
+          var color = colors[i % colors.length];
+          html += "<span style='color: " + color + "'>" + letters[i] + "</span>";
         }
-        20% {
-          color: orange;
-        }
-        40% {
-          color: yellow;
-        }
-        60% {
-          color: green;
-        }
-        80% {
-          color: blue;
-        }
-        100% {
-          color: purple;
-        }
+        text.innerHTML = html;
       }
-      .animation {
-        animation: fade 6s infinite, colorChange 9s infinite;
-      }
+      setInterval(changeColors, 500);
+    </script>
     </style>
   </head>
   <body>
     <div class="container">
         <header>
           <img src="logop.png" alt="Logo"/>
-          <h1 class="animation">INTEGRITY FARM</h1>
+          <h1 id="text">INTEGRITY FARM</h1>
         </header>
     <h2>The future of genes and blockcain</h2>
     <div class="image-row">
