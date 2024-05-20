@@ -74,11 +74,13 @@
       }
        .split {
         width: 50%;
-        float: left;
-        padding: 20px;
+        height: 100vh;
+        display: inline-block;
         box-sizing: border-box;
-        border: 30px solid #000;
-        vertical-align: top;
+      }
+      .image {
+        max-width: 100%;
+        max-height: 100%;
       }
       .image-row {
         display: flex;
@@ -175,7 +177,9 @@
          <p>A pie chart reflects the token distribution between Early Investors and the Ecosystem. The total token issuance is 1,000,000,000. Early Investors own 10% (100,000,000 tokens), while the Ecosystem owns 90% (900,000,000 tokens).</p>
       </div>
       <div class="split">
+         <div class="image">
             <img class="faid-in" src="pie.png" alt="Pai">
+         </div>
       </div>
       </div>
     <footer>
