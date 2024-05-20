@@ -46,6 +46,9 @@
         line-height: 1.5;
         margin-bottom: 10px;
       }
+      strong {
+        text-decoration: underline;
+      }
       .image-container {
         display: flex;
         justify-content: center;
@@ -69,13 +72,22 @@
         vertical-align: top;
       }
       }
-       .zonePai {
+       .split {
         width: 50%;
+        height: 100vh;
+        display:flex;
+        align-items: center;
+        justify-content: center;
         float: left;
-        padding: 20px;
         box-sizing: border-box;
         border: 30px solid #000;
         vertical-align: top;
+      }
+      .left {
+        background-color: #f1f1f1;
+      }
+      .right {
+        background-color: #e9e9e9;
       }
       .image-row {
         display: flex;
@@ -166,15 +178,15 @@
          </div>
       </div>
     <h2>TOKENOMICS</h2>
-      <div class="zonePai">
-      <p> Early Investors (10%): Early investors are individuals who provide the initial capital needed to launch the project. They take on significant risk by investing in the project at its early stages and, in return, receive a portion of the tokens.
-
-Ecosystem (90%): The remaining 90% of the tokens will be used within the ecosystem on the gene market, with a predetermined monthly release of coins equal to 2% of the total issuance.
-
-A pie chart reflects the token distribution between Early Investors and the Ecosystem. The total token issuance is 1,000,000,000. Early Investors own 10% (100,000,000 tokens), while the Ecosystem owns 90% (900,000,000 tokens).</p>
+      <div class="split left">
+         <p><strong>Early Investors (10%):</strong>Early investors are individuals who provide the initial capital needed to launch the project. They take on significant risk by investing in the project at its early stages and, in return, receive a portion of the tokens.</p>
+         <p><strong>Ecosystem (90%):</strong> The remaining 90% of the tokens will be used within the ecosystem on the gene market, with a predetermined monthly release of coins equal to 2% of the total issuance.</p>
+         <p>A pie chart reflects the token distribution between Early Investors and the Ecosystem. The total token issuance is 1,000,000,000. Early Investors own 10% (100,000,000 tokens), while the Ecosystem owns 90% (900,000,000 tokens).</p>
       </div>
-      <div class="zonePai">
-        <img class="faid-in" src="pie.png" alt="Pai">
+      <div class="split right">
+        <div class="image-container">
+            <img class="faid-in" src="pie.png" alt="Pai">
+        </div>
       </div>
       </div>
     <footer>
