@@ -158,14 +158,18 @@
         right: 100px; 
       }
       .container3 {
-        width: 1000px;
-        height: 700px;
-        background-image: url("rm.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        
+         width: 1000px;
+         height: 700px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
       }
+
+      .container3 img {
+         max-width: 100%;
+         max-height: 100%;
+      }
+
       .custom-link {
         color: #228B22; 
         text-decoration: none;
@@ -251,6 +255,7 @@
     <h2>ROAD MAP</h2>
     <div class="container">
      <div class="container3">
+       <img scr="rm.jpg">
      </div>  
     </div>
    
