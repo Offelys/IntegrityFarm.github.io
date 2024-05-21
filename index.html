@@ -158,17 +158,55 @@
         top: 55px; 
         right: 100px; 
       }
+      .pdf-link2 {
+        position: absolute;
+        top: 55px; 
+        right: 150px; 
+      }
       .container3 {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: 50vh;
       }
       .custom-link {
         color: #228B22; 
         text-decoration: none;
       }
+      .back-to-top {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        line-height: 40px;
+        text-align: center;
+      }
+
+      .back-to-top:hover {
+        background-color: #0056b3;
+      }
     </style>
+    <script>
+      window.addEventListener('scroll', function() {
+        var button = document.querySelector('.back-to-top');
+        if (window.pageYOffset > 300) {
+          button.style.display = 'block';
+        } else {
+          button.style.display = 'none';
+        }
+      });
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    </script>
   </head>
   <body>
     <div class="container">
@@ -258,9 +296,16 @@
        <img src="rm.jpg" alt="road map">
      </div>  
     </div>
-
+    <button class="back-to-top" onclick="scrollToTop()">
+        &uarr;
+      </button>
     <footer>
-      <p>&copy; 2024 My GitHub Page. All rights reserved.</p>
+      <div class="pdf-link">
+            <a href="1" class="custom-link">Telegram</a>
+          </div>
+       <div class="pdf-link2">
+            <a href="1" class="custom-link">Email:inte.farm.grity@gmail.com</a>
+          </div>
     </footer>
         
   </body>
