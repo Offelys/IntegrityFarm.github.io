@@ -192,6 +192,20 @@
       .back-to-top:hover {
         background-color: #0056b3;
       }
+      .nav-links {
+        list-style: none;
+        padding: 0;
+      }
+
+      .nav-links li {
+        display: inline;
+        margin-right: 10px;
+      }
+
+      .nav-links li a {
+        text-decoration: none;
+        color: #007bff;
+      }
     </style>
     <script>
       window.addEventListener('scroll', function() {
@@ -215,9 +229,10 @@
           <div class="pdf-link">
             <a href="https://github.com/Offelys/IntegrityFarm.github.io/blob/main/WP%20.pdf" class="custom-link">GREEN PAPER</a>
           </div>
-          <div class="pdf-link2">
-            <a href="https://github.com/Offelys/IntegrityFarm.github.io/blob/main/WP%20.pdf" class="custom-link">Tokenomics</a>
-          </div>
+          <ul class="nav-links">
+           <li><a href="#section1">Tokenomics</a></li>
+           <li><a href="#section2">Our products</a></li>
+          </ul>
         </header>
     
     <h2>THE FUTURE OF GENES AND BLOCKCHAIN</h2>
@@ -246,9 +261,9 @@
       </div>
     </div>
     
-    <h2>TOKENOMICS of the INTEGRITY TOKEN (INT)</h2>
+    <h2 id="#section1">TOKENOMICS of the INTEGRITY TOKEN (INT)</h2>
     
-      <div> class="container">
+      <div class="container">
        <div class="image-container">
           <div class="split">
              <p><strong><h1>Early Investors (10%)</h1></strong> Early investors are individuals who provide the initial capital needed to launch the project.</p>
@@ -264,7 +279,7 @@
       </div>
 
     
-    <h2>OUR PRODUCTS</h2>
+    <h2 id="#section2">OUR PRODUCTS</h2>
     
     <div class="container">
       <div class="image-container">
