@@ -269,37 +269,42 @@
        <img class="fade-in" src="kl56.png" alt="Image 2">
      </div>
     </div>
-    
-    <input type="email" id="emailInput" placeholder="Enter email">
-    <div class="center"><button type="button" class="subscribe-button dark-theme" onclick="ShowForm()">Subscribe</button></div>
-      <div id="subscribeForm" style="display: none;">
-         <form>
-           <input type="email" placeholder="Введите email" required>
-           <button type="submit" onclick="saveEmail()">Подтвердить</button>
-         </form>
-      </div>
-   <script>
-        function saveEmail() {
-            var email = document.getElementById('emailInput').value;
-            fetch('/path/to/subscription.py?email=' + email)
-                .then(response => response.text())
-                .then(result => {
-                    if (result === 'success') {
-                        document.getElementById('message').innerText = 'Email saved successfully.';
-                    } else {
-                        document.getElementById('message').innerText = 'Failed to save email.';
-                    }
-                })
-                .catch(error => {
-                    document.getElementById('message').innerText = 'An error occurred.';
-                });
+
+    <div class="center">
+  <button type="button" class="subscribe-button dark-theme" onclick="showForm()">Subscribe</button>
+</div>
+
+<div id="subscribeForm" style="display: none;">
+  <form>
+    <input type="email" placeholder="Enter email" required>
+    <button type="submit" onclick="saveEmail()">Confirm</button>
+  </form>
+</div>
+
+<script>
+  function showForm() {
+    document.getElementById("subscribeForm").style.display = "block";
+  }
+
+  function saveEmail() {
+    var email = document.querySelector("#subscribeForm input[type='email']").value;
+    fetch('subscription.py?email=' + email)
+      .then(response => response.text())
+      .then(result => {
+        if (result === 'success') {
+          document.getElementById('message').innerText = 'Email saved successfully.';
+        } else {
+          document.getElementById('message').innerText = 'Failed to save email.';
         }
-    </script>
-    <script>
-      function showForm() {
-         document.getElementById("subscribeForm").style.display = "block";
-         }
-    </script>
+      })
+      .catch(error => {
+        document.getElementById('message').innerText = 'An error occurred.';
+      });
+  }
+</script>
+
+    
+   
     <div class="container">
       <div class="image-container">
          <div class="zone">
