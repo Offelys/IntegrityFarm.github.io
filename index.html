@@ -252,7 +252,7 @@
      input[type="email"] {
         width: 300px;
         height: 40px;
-        margin-bottom: 10px;
+        
         padding: 5px;
         font-size: 16px;
         border-radius: 5px;
@@ -262,8 +262,8 @@
       button[type="submit"] {
          width: 150px;
          height: 40px;
-         background-color: #BB86FC;
-         color: #fff;
+         background-color: #000;
+         color: purple;
          font-size: 16px;
          border: none;
          border-radius: 5px;
@@ -284,6 +284,10 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     </script>
+    <script>
+      function showForm() {
+         document.getElementById("subscribeForm").style.display = "block";
+       }
   </head>
   <body>
     <div class="container">
@@ -310,26 +314,23 @@
     </div>
 
     <div class="center">
-  <button type="button" class="subscribe-button dark-theme" onclick="showForm()">Subscribe</button>
-</div>
+       <button type="button" class="subscribe-button dark-theme" onclick="showForm()">Subscribe</button>
+    </div>
 
-<div id="subscribeForm">
-  <form>
-    <input type="email" placeholder="Enter email" required>
-    <button type="submit" onclick="saveEmail()">Confirm</button>
-  </form>
-</div>
+    <div id="subscribeForm">
+      <form>
+         <input type="email" placeholder="Enter email" required>
+          button type="submit" onclick="saveEmail()">Confirm</button>
+         </form>
+     </div>
 
-<script>
-  function showForm() {
-    document.getElementById("subscribeForm").style.display = "block";
-  }
+   
 
-  function saveEmail() {
-    var email = document.querySelector("#subscribeForm input[type='email']").value;
-    fetch('subscription.py?email=' + email)
-      .then(response => response.text())
-      .then(result => {
+      function saveEmail() {
+        var email = document.querySelector("#subscribeForm input[type='email']").value;
+        fetch('subscription.py?email=' + email)
+        .then(response => response.text())
+        .then(result => {
         if (result === 'success') {
           document.getElementById('message').innerText = 'Email saved successfully.';
         } else {
