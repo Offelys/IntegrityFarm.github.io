@@ -252,7 +252,7 @@
      input[type="email"] {
         width: 300px;
         height: 40px;
-        
+        font-color:  #333;
         padding: 5px;
         font-size: 16px;
         border-radius: 5px;
@@ -284,11 +284,7 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     </script>
-    <script>
-      function showForm() {
-         document.getElementById("subscribeForm").style.display = "block";
-       }
-    </script>
+    
   </head>
   <body>
     <div class="container">
@@ -318,15 +314,10 @@
        <button type="button" class="subscribe-button dark-theme" onclick="showForm()">Subscribe</button>
     </div>
 
-    <div id="subscribeForm">
-      <form>
-         <input type="email" placeholder="Enter email" required>
-          <button type="submit" onclick="saveEmail()">Confirm</button>
-         </form>
-     </div>
-
-   
-<script>
+    <script>
+      function showForm() {
+         document.getElementById("subscribeForm").style.display = "block";
+       }
       function saveEmail() {
         var email = document.querySelector("#subscribeForm input[type='email']").value;
         fetch('subscription.py?email=' + email)
@@ -337,14 +328,19 @@
         } else {
           document.getElementById('message').innerText = 'Failed to save email.';
         }
-      })
+        })
       .catch(error => {
         document.getElementById('message').innerText = 'An error occurred.';
-      });
-  }
-</script>
+        });
+        }
+      </script>
 
-    
+    <div id="subscribeForm">
+      <form>
+         <input type="email" placeholder="Enter email" required>
+          <button type="submit" onclick="saveEmail()">Confirm</button>
+         </form>
+     </div>   
    
     <div class="container">
       <div class="image-container">
