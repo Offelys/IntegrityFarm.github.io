@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <style>
+      body {
+        background-color: #1a1a1a;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 40px;
+        justify-content: space-between;
+        height: 100%;
+      }
+      header {
+        background-color: #000;
+        padding: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+      }
+      header img {
+        max-width: 50px;
+        margin-right: 10px;
+      }
+      footer {
+        background-color: #000;
+        padding: 10px;
+        text-align: center;
+      }
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #228B22;
+      }
+      h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+        color: purple;
+        text-align: left;
+      }
+       h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+        color: #F8E9A8;
+        text-align: center;
+      }
+      p {
+        line-height: 2;
+        color: #F8E9A8;
+        margin-bottom: 20px;
+      }
+     }
+      .nav-links {
+        list-style: none;
+        padding: 0;
+        position: relative; 
+        left: 500px;
+      }
+
+      .nav-links li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      .nav-links li a {
+        text-decoration: none;
+        color: #007bff;
+      }
+        
+     .image-container {
+        display: flex;
+       justify-content: center;
+        height: 400px;
+        background-color:#000;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+      }
+
+      @keyframes sparkle {
+        0% {
+         background-color: darkred;
+         opacity: 0;
+        }
+        50% {
+         background-color: #301934;
+         opacity: 1;
+        }
+        100% {
+          background-color: rgba(0, 0, 139, 0.8);
+          opacity: 0;
+        }
+       }
+
+      .image-container::after {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         animation: sparkle 10s infinite;
+  }
+</style>
+
+  </style>
+<head>
+  <title>My Blog</title>
+</head>
+<body class="dark-theme">
+  <header>
+    <img src="logop.png" alt="Logo"/>
+    <h1 class="animation">INTEGRITY FARM</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+ 
+  <main>
+    <article>
+      <div class="container">
+      <h3><u>INTRO INTO GENETICS</u></h3>
+        <div class="image-container"><img src="ar1.png"></div>
+        <div style="text-align: left; background-color: #023020; padding: 200px;">
+          
+          <h2><strong>🧬 Gene Sequencing: Unlocking the Door to the World of Genetics 🧬</strong></h2> 
+          <p>Gene sequencing is an amazing process that allows us to delve into the depths of our genetic code. 🧬✨</p>
+          <p><h2><strong>⚙️ What is gene sequencing? ⚙️</strong></h2> Gene sequencing is a technology that enables us to determine the sequence of nucleotides in DNA. It's like deciphering a secret message that resides in each of our cells. 🔍🔬
+          </p>
+          <h2><strong>🔬 How does gene sequencing work? 🔬</strong></h2><p> In the process of gene sequencing, scientists use various methods and tools to read the sequence of nucleotides. They break down the DNA into small fragments and sequentially determine which nucleotides are present in each fragment. Then, with the help of computer algorithms, these fragments are assembled into a unified sequence, creating a complete description of the genetic code. 🧩🔎
+          </p>
+          <p><strong>🌍 The Significance of Gene Sequencing 🌍</strong> Gene sequencing holds immense value in the fields of science and medicine. It allows researchers to understand which genes are associated with various diseases and helps in developing innovative methods for treatment and prevention of genetic disorders. It opens new horizons in the field of medicine and helps us better understand our own genetic essence. 💡💉
+          </p>
+          <p><strong>🌈 Conclusions 🌈</strong> Gene sequencing is an exciting exploration that allows us to dive into the world of genetics and gain a better understanding of ourselves. It's like embarking on a journey through our own genetic map, unlocking new possibilities for science and medicine. 🚀🧬
+Don't settle for what has been achieved! Explore, discover, and conquer new frontiers of genetic discoveries! 💪💡</p>
+          
+        </div>
+     </div>
+    </article>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 Integrity Farm. All rights reserved.</p>
+  </footer>
+</body>
+</html>
