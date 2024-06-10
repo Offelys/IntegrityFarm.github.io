@@ -231,28 +231,7 @@
            
          }
     </style>
-    <script>
-        function saveEmail() {
-            var email = document.getElementById('emailInput').value;
-            fetch('/path/to/subscription.py?email=' + email)
-                .then(response => response.text())
-                .then(result => {
-                    if (result === 'success') {
-                        document.getElementById('message').innerText = 'Email saved successfully.';
-                    } else {
-                        document.getElementById('message').innerText = 'Failed to save email.';
-                    }
-                })
-                .catch(error => {
-                    document.getElementById('message').innerText = 'An error occurred.';
-                });
-        }
-    </script>
-    <script>
-      function showForm() {
-         document.getElementById("subscribeForm").style.display = "block";
-         }
-    </script>
+   
     <script>
       window.addEventListener('scroll', function() {
         var button = document.querySelector('.back-to-top');
@@ -299,7 +278,28 @@
            <button type="submit" onclick="saveEmail()">Подтвердить</button>
          </form>
       </div>
-   
+   <script>
+        function saveEmail() {
+            var email = document.getElementById('emailInput').value;
+            fetch('/path/to/subscription.py?email=' + email)
+                .then(response => response.text())
+                .then(result => {
+                    if (result === 'success') {
+                        document.getElementById('message').innerText = 'Email saved successfully.';
+                    } else {
+                        document.getElementById('message').innerText = 'Failed to save email.';
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('message').innerText = 'An error occurred.';
+                });
+        }
+    </script>
+    <script>
+      function showForm() {
+         document.getElementById("subscribeForm").style.display = "block";
+         }
+    </script>
     <div class="container">
       <div class="image-container">
          <div class="zone">
