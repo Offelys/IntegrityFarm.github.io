@@ -113,7 +113,23 @@
       background: linear-gradient(45deg, #8B0000, #00008B, #301934, black);
       background-size: 400% 400%;
       animation: gradientAnimation 15s ease infinite;
-  }
+     }
+    #content {
+
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size:24px;
+    }
+    #overlay-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
 </style>
 
   </style>
