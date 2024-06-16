@@ -81,7 +81,7 @@
       left: 0;
       height: 400px;
       z-index: -1;
-      background-image: url('ar4.png');
+      
     }
 
     @keyframes gradientAnimation {
@@ -100,6 +100,20 @@
       background: linear-gradient(45deg, #8B0000, #00008B, #301934, black);
       background-size: 400% 400%;
       animation: gradientAnimation 15s ease infinite;
+    }
+   
+    #content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 50px;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
   </style>
@@ -124,6 +138,9 @@
   </header>
  
   <main>
+    <div id="background"></div>
+  <div id="content">
+    <img src="ar4.png" alt="Your Image">
     <article>
       <div class="container">
       <h3><u>🧬INTEGRATING BLOCKHAIN TECHNOLOGY WITH GENETIC INFORMATION 🧬</u></h3>
