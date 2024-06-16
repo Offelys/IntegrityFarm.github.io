@@ -98,7 +98,15 @@
       background-size: 400% 400%;
       animation: gradientAnimation 15s ease infinite;
     }
+    #content {
 
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size:24px;
+    }
     #overlay-image {
       position: absolute;
       top: 50%;
@@ -130,7 +138,8 @@
  
   <main>
     <div id="background"></div>
-    <img id="overlay-image" src="ar4.png" alt="Your Image">
+    <div id="content">
+    <img id="overlay-image" src="ar4.png" alt="Your Image"></div>
     
     <article>
       <div class="container">
